@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaf Prisca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://cdn.pixabay.com/photo/2015/07/02/10/36/lightning-828550_1280.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #ff6b6b;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #d43f3f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Optional background lightning effect */
+        @keyframes flash {
+            0% {
+                background-color: rgba(255, 255, 255, 0);
+            }
+            50% {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+        
+        /* Lightning flash for dramatic effect */
+        .flash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: -1;
+            animation: flash 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Maaf Prisca</h1>
+    <p>Kalau aku labil, aku minta maaf...</p>
+    <button onclick="alert('Aku akan lebih baik untukmu 😔')">Aku janji</button>
+</div>
+
+<div class="flash"></div>
+
+</body>
+</html>
